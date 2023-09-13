@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Herr Von Muellerhoff', cursive;
+}
+
+.page-container{
+    max-width: 120rem;
+    margin:auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */ 
+
+.landing-section {
+    background: url(../img/facial-hair-cut.jpg) center center/cover;
+    height: 100vh;
+    display: grid;
+    grid:
+    ". header header header header" 8rem
+    ". landing-content landing-content landing-content ." auto
+    ". . contact-box . ." 8rem
+    / 1fr 1fr 25rem 1fr 1fr;
+}
+
+.logo {
+    flex: 0 0 13rem;
+    margin-right: 5rem;
+}
+
+header {
+    grid-area: header;
+    position: relative;
+    top:2rem;
+    display: flex;
+    align-items: stretch;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(22, 22, 22, 0.8);
+    flex: 1 1 auto;
+}
+
+header nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;   
+}
+
+
+header nav ul li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+header nav a {
+    padding: 2.4rem 1.8rem;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+
+header nav a:hover{
+    color: #bc9255;
+}
+
+header nav .active{
+    color: #bc9255
+}
+
+nav ul a {
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+
