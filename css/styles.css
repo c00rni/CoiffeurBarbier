@@ -9,8 +9,16 @@ html, body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+body {
+    font-size: 1.8rem;
+    color:#555;
+    font-weight: 300;
+    font-style: normal;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Herr Von Muellerhoff', cursive;
+    color:#bc9255;
 }
 
 .page-container{
@@ -27,17 +35,6 @@ a {
 }
 
 /* Header */ 
-
-.landing-section {
-    background: url(../img/facial-hair-cut.jpg) center center/cover;
-    height: 100vh;
-    display: grid;
-    grid:
-    ". header header header header" 8rem
-    ". landing-content landing-content landing-content ." auto
-    ". . contact-box . ." 8rem
-    / 1fr 1fr 25rem 1fr 1fr;
-}
 
 .logo {
     flex: 0 0 13rem;
@@ -103,4 +100,64 @@ nav ul a {
     letter-spacing: 0.1rem;
 }
 
+/* landing section */
 
+.landing-section {
+    background: url(../img/facial-hair-cut.jpg) center center/cover;
+    height: 100vh;
+    display: grid;
+    grid:
+    ". header header header header" 8rem
+    ". landing-content landing-content landing-content ." auto
+    ". . contact-box . ." 8rem
+    / 1fr 1fr 25rem 1fr 1fr;
+}
+
+.landing-content {
+    grid-area: landing-content;
+    text-align: center;
+    align-self: center;
+}
+
+.landing-content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 5rem;
+}
+
+.landing-content h2 {
+    font-size: 5rem;
+    color:white;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5rem;
+}
+
+.btn {
+    border: 0.1rem solid black;
+    text-align: center;
+    margin: 0 3.5rem
+}
+
+.btn-big {
+    color: white;
+    padding:1.2rem 3.2rem;
+    border:0.2rem solid white;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.small-contact-box {
+    grid-area: contact-box;
+    align-self: center;
+    text-align: center;
+    color: white
+}
+
+.small-contact-box h6 {
+    font-size: 1.8rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.small-contact-box span {
+    font-weight: 600;
+    font-size: 2rem;
+}
