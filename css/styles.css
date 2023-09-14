@@ -8,6 +8,7 @@ html, body {
     font-size: 62.5%;
     font-family: 'Josefin Sans', sans-serif;
     scroll-behavior: smooth;
+    background: #efefef;
 }
 
 body {
@@ -89,6 +90,21 @@ a {
 
 .white-txt {
     color:white !important
+}
+
+.annonce {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+} 
+
+.theme-color {
+    color:#bc9255
+}
+
+.mt-4 {
+    margin-top: 4rem;
 }
 
 /* Header */ 
@@ -338,3 +354,118 @@ nav ul a {
 .pricing-col p {
     grid-area: details;
 }
+
+/* Team */
+
+.team {
+    background: #efefef;
+    padding: 4rem;
+}
+
+.team-members {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
+    padding-top:5rem;
+}
+
+.member {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40rem;
+    padding-bottom: 2rem;
+}
+
+.member-caption {
+    width: 100%;
+    height: 50rem;
+    background: url(../img/boss.jpg) center center/cover;
+}
+
+.member:nth-child(2) .member-caption {
+    background: url(../img/man1.jpg) center center/cover;
+}
+
+.member-details h4{
+    padding-top:1rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color:#1f1f1f;
+}
+
+.member-title {
+    text-align: center;
+    font-weight: 400;
+    color:#bc9255
+}
+
+/* Work hours */
+
+.hours {
+    color: white;
+    background: #1f1f1f;
+    padding: 5rem 1rem ;
+}
+
+.week-hours {
+    display: grid;
+    grid: "lundi mardi mercredi jeudi vendredi samedi" / 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.day-hours:nth-child(1) {
+    grid-area: lundi;
+}
+
+.day-hours:nth-child(2) {
+    grid-area: mardi;
+}
+
+.day-hours:nth-child(3) {
+    grid-area: mercredi;
+}
+
+.day-hours:nth-child(4) {
+    grid-area: jeudi;
+}
+
+.day-hours:nth-child(5) {
+    grid-area: vendredi;
+}
+
+.day-hours:nth-child(6) {
+    grid-area: samedi;
+}
+
+.day-hours {
+    border:0.2rem solid #bc9255;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    min-width: 7rem;
+}
+
+.day-hours h2 {
+    padding-top:1rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    color:white;
+}
+
+.day-hours p {
+    text-align: center;
+}
+
+
+
+
+
+
