@@ -16,9 +16,30 @@ body {
     font-style: normal;
 }
 
+.content-container {
+    max-width: 120rem;
+    margin: auto;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Herr Von Muellerhoff', cursive;
     color:#bc9255;
+    letter-spacing: 0.3rem;
+}
+
+.section-subtitile {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.section-desc {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.section-head {
+    margin-bottom: 4.5rem;
 }
 
 .page-container{
@@ -30,8 +51,30 @@ ul {
     list-style: none;
 }
 
+p {
+    line-height: 2rem;
+}
+
 a {
     text-decoration: none;
+}
+
+.btn {
+    border: 0.1rem solid black;
+    text-align: center;
+}
+
+.btn-light {
+    display: inline-block;
+    margin-top: 1.8rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color:#1f1f1f;
+    transition: all 0.2s;
+}
+
+.btn-light:hover {
+    color:#bc9255
 }
 
 /* Header */ 
@@ -109,8 +152,8 @@ nav ul a {
     grid:
     ". header header header header" 8rem
     ". landing-content landing-content landing-content ." auto
-    ". . contact-box . ." 8rem
-    / 1fr 1fr 25rem 1fr 1fr;
+    ". . contact-box . ." 15rem
+    / 0.8fr 1fr 30rem 1fr 0.8fr;
 }
 
 .landing-content {
@@ -131,12 +174,6 @@ nav ul a {
     margin-bottom: 5rem;
 }
 
-.btn {
-    border: 0.1rem solid black;
-    text-align: center;
-    margin: 0 3.5rem
-}
-
 .btn-big {
     color: white;
     padding:1.2rem 3.2rem;
@@ -153,11 +190,84 @@ nav ul a {
 }
 
 .small-contact-box h6 {
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
     font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+
 }
 
 .small-contact-box span {
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+/* Section services */
+
+.barber-services {
+    background: #efefef;
+    padding: 1.5rem;
+    padding-bottom: 6rem;
+}
+
+.barber-services span{
+    display: block;
+    font-size: 3.2rem;
+    color:#1f1f1f;
+    font-weight: 700;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.service {
+    margin: 1rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    padding:5rem 3rem 4rem 3rem;
+    border:0.2rem solid #bc9255;
+    display: grid;
+    grid: 
+    "img" 9rem
+    "service-content" auto /
+    1fr;
+    justify-content: start;
+}
+
+.service-img {
+    grid-area: img;
+    /* border:0.2rem dashed #bc9255; */
+    width: 6.8rem;
+    height: 6.8rem;
+    grid-column: 1 / 2;
+}
+
+.service-content {
+    grid-area: service-content;
+}
+
+.service-content p {
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.service:nth-child(1) .service-img{
+    background: url("../img/scissors-comb.png") center center/cover;
+}
+
+.service:nth-child(2) .service-img{
+    background: url("../img/barber-chair.png") center center/cover;
+}
+
+.service:nth-child(3) .service-img{
+    background: url("../img/beauty-salon.png") center center/cover;
+}
+
+.service h4 {
+    color: #1f1f1f;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
 }
