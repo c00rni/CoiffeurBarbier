@@ -13,16 +13,16 @@
     />
   </head>
   <body>
-    <section class="landing-section">
+    <section class="landing-section" id="landing">
       <header>
         <img class="logo" src="./img/logo.png" alt="Logo du coiffeur de nyon" />
         <div class="nav-bar">
           <nav>
             <ul>
-              <li><a class="active" href="#">Accueil</a></li>
+              <li><a class="active" href="#landing">Accueil</a></li>
               <li><a href="#">A propos</a></li>
-              <li><a href="#">services</a></li>
-              <li><a href="#">Prix</a></li>
+              <li><a href="#service">services</a></li>
+              <li><a href="#prices">Prix</a></li>
               <li><a href="#">equipe</a></li>
               <li><a href="#">Horaires</a></li>
               <!-- <li><a href="#">Gallery</a></li>-->
@@ -43,7 +43,7 @@
         <p>Du lundi au vendredi</p>
       </div>
     </section>
-    <section class="barber-services">
+    <section class="barber-services" id="service">
       <div class="content-container">
         <div class="section-head">
           <h4 class="section-subtitile">Nos services</h4>
@@ -89,6 +89,45 @@
               </p>
               <a href="#" class="btn btn-light">Savoir plus</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="prices" id="prices">
+      <div class="content-container">
+        <div class="section-head">
+          <h4 class="section-subtitile">Nos prix</h4>
+          <span class="white-txt">Les incontournales et tendences</span>
+          <p class="section-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab
+            possimus a!
+          </p>
+        </div>
+        <div class="price-box">
+          <div class="price-box-img"></div>
+          <div class="price-col">
+            <h4>Coupe</h4>
+            <div class="price-dots"></div>
+            <h3>25 CHF</h3>
+            <p>Coupe et contourage pour homme</p>
+          </div>
+          <div class="price-col">
+            <h4>Barbe</h4>
+            <div class="price-dots"></div>
+            <h3>15 CHF</h3>
+            <p>Taille de precision pour barbe</p>
+          </div>
+          <div class="price-col">
+            <h4>Coupe + barbe</h4>
+            <div class="price-dots"></div>
+            <h3>30 CHF</h3>
+            <p>Coupe et contourage pour homme</p>
+          </div>
+          <div class="price-col">
+            <h4>Coupe enfant / etudiants</h4>
+            <div class="price-dots"></div>
+            <h3>20 CHF</h3>
+            <p>Tarif préferenciel pour les enfants et étudiants</p>
           </div>
         </div>
       </div>
