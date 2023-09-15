@@ -97,7 +97,7 @@ a {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
-} 
+}
 
 .theme-color {
     color:#bc9255
@@ -107,19 +107,25 @@ a {
     margin-top: 4rem;
 }
 
+.go-up {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+    color:#bc9255;
+    z-index: 1;
+}
+
 /* Header */ 
 
 .logo {
-    flex: 0 0 13rem;
     margin-right: 5rem;
+    width: 15rem;
 }
 
 header {
     grid-area: header;
-    position: relative;
-    top:2rem;
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 .nav-bar {
@@ -173,6 +179,7 @@ nav ul a {
     letter-spacing: 0.1rem;
 }
 
+
 /* landing section */
 
 .landing-section {
@@ -180,10 +187,11 @@ nav ul a {
     height: 100vh;
     display: grid;
     grid:
-    ". header header header header" 8rem
+    ". header header header header" 12rem
     ". landing-content landing-content landing-content ." auto
     ". . contact-box . ." 15rem
     / 0.8fr 1fr 30rem 1fr 0.8fr;
+    z-index: 2;
 }
 
 .landing-content {
@@ -242,7 +250,9 @@ nav ul a {
 
 .services {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .service {
@@ -256,6 +266,7 @@ nav ul a {
     "service-content" auto /
     1fr;
     justify-content: start;
+    max-width: 35rem;
 }
 
 .service-img {
@@ -280,11 +291,15 @@ nav ul a {
 }
 
 .service:nth-child(2) .service-img{
-    background: url("../img/barber-chair.png") center center/cover;
+    background: url("../img/clipper.png") center center/cover;
 }
 
 .service:nth-child(3) .service-img{
-    background: url("../img/beauty-salon.png") center center/cover;
+    background: url("../img/mustache.png") center center/cover;
+}
+
+.service:nth-child(4) .service-img{
+    background: url("../img/eyelashes-black.png") center center/cover;
 }
 
 .service h4 {
@@ -302,6 +317,13 @@ nav ul a {
     background: #1f1f1f;
 }
 
+.price-plans {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
 .price-box {
     display: flex;
     flex-flow: column nowrap;
@@ -309,15 +331,25 @@ nav ul a {
     border-radius: 1rem;
     padding: 5rem 3rem 4rem 3rem;
     max-width: 40rem;
-    margin:auto;
+}
+
+.price-box:first-child {
+    background: linear-gradient(to right bottom, #1f1f1f 85%, #FDA7DF);
 }
 
 .price-box-img {
-    background: url(../img/mustache-with-beard.png) center center/cover;
     width: 9.5rem;
     height: 9.5rem;
     margin-bottom:0 auto auto 3rem;
     align-self: center;
+}
+
+.price-box:nth-child(2) .price-box-img {
+    background: url(../img/mustache-with-beard.png) center center/cover;
+}
+
+.price-box:nth-child(1) .price-box-img {
+    background: url(../img/eyebrow-icone.png) center center/cover;
 }
 
 .price-col {
@@ -407,8 +439,10 @@ nav ul a {
 
 .hours {
     color: white;
-    background: #1f1f1f;
     padding: 5rem 1rem ;
+    background: url(../img/gbs-tools.jpg) center center/cover;
+    background-color: rgba(31, 31, 31, 0.8);
+    background-blend-mode: multiply;
 }
 
 .week-hours {
@@ -442,12 +476,18 @@ nav ul a {
     grid-area: samedi;
 }
 
+.day-hours:hover .day-content {
+    color:#bc9255;
+    transition: all 0.3s;
+}
+
 .day-hours {
     border:0.2rem solid #bc9255;
     padding: 3rem 1.5rem 2rem 1.5rem;
     border-radius: 1rem;
     margin: 1rem;
     min-width: 7rem;
+    background: #222;
 }
 
 .day-hours h2 {
@@ -464,8 +504,29 @@ nav ul a {
     text-align: center;
 }
 
+/* Contact */
 
+.contact {
+    padding: 4rem 1rem;
+    background: #1f1f1f;
+    color:white;
+}
 
+.contact-content {
+    display: grid;
+    grid: "contact map" 1fr / 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.contact-content .section-head {
+    grid-area: contact;
+}
+
+.map {
+    grid-area: map;
+    margin: 4rem;
+}
 
 
 

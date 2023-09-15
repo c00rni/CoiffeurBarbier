@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Josefin+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/2a703afa31.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="landing-section" id="landing">
@@ -27,31 +31,31 @@
               <li><a href="#hours">Horaires</a></li>
               <!-- <li><a href="#">Gallery</a></li>-->
               <li><a href="#">blog</a></li>
-              <li><a href="#">contacter</a></li>
+              <li><a href="#contact">contacter</a></li>
             </ul>
           </nav>
         </div>
       </header>
       <div class="landing-content">
         <h4>Style Pour Les Hommes</h4>
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing</h2>
-        <a class="btn btn-big" href="#">Réserer maintenant</a>
+        <h2>Coiffeur Barbier</h2>
+        <a class="btn btn-big" href="#contact">Réserver maintenant</a>
       </div>
       <div class="small-contact-box">
         <h6>Nous contacter</h6>
-        <span>+41 78 721 54 03</span>
+        <span>+41 78 238 63 96</span>
         <p>Du lundi au vendredi</p>
       </div>
+      <a href="#landing" class="go-up"
+        ><i class="fa-solid fa-arrow-up-from-bracket fa-2xl"></i
+      ></a>
     </section>
     <section class="barber-services" id="service">
       <div class="content-container">
         <div class="section-head">
           <h4 class="section-subtitile">Nos Services</h4>
-          <span>Notre sallon ses services pour les hommes</span>
-          <p class="section-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab
-            possimus a!
-          </p>
+          <span>Notre salon de coiffure vous offre ses sercices</span>
+          <p class="section-desc"></p>
         </div>
         <div class="services">
           <div class="service">
@@ -59,9 +63,9 @@
             <div class="service-content">
               <h4>Coiffure homme</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                fugiat debitis laborum. Dolore tempore illo vero veritatis amet,
-                pariatur maiores?
+                Coupe de cheuveux classic ou tendance, nos barbier
+                professionnels travaillent sur tout type de coiffure. De la
+                coupe afro à la coupe degradé à la tondeuse.
               </p>
               <a href="#" class="btn btn-light">Savoir plus</a>
             </div>
@@ -69,11 +73,11 @@
           <div class="service">
             <div class="service-img"></div>
             <div class="service-content">
-              <h4>Style de coiffure</h4>
+              <h4>Taille de barbe</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                fugiat debitis laborum. Dolore tempore illo vero veritatis amet,
-                pariatur maiores?
+                La taille, la coupe de barbe sont parmi nos services les plus
+                populaire. Nous faisons les barbes complète, barbe sculptée et
+                courte.
               </p>
               <a href="#" class="btn btn-light">Savoir plus</a>
             </div>
@@ -81,11 +85,22 @@
           <div class="service">
             <div class="service-img"></div>
             <div class="service-content">
-              <h4>Entretien Barbe</h4>
+              <h4>Taille de moustache</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                fugiat debitis laborum. Dolore tempore illo vero veritatis amet,
-                pariatur maiores?
+                Taille et mise en forme de moustache pour un style soigné. Les
+                styles classique comme la moustache Fu Manchu ou Handlebar.
+              </p>
+              <a href="#" class="btn btn-light">Savoir plus</a>
+            </div>
+          </div>
+          <div class="service">
+            <div class="service-img"></div>
+            <div class="service-content">
+              <h4>Epilation au fils</h4>
+              <p>
+                Les epilations au fils du visage permettent de un minimun de
+                douleur et des gains temps importants. Epilation des sourcis au
+                fil réussi garanti pour le meilleur prix.
               </p>
               <a href="#" class="btn btn-light">Savoir plus</a>
             </div>
@@ -103,31 +118,53 @@
             possimus a!
           </p>
         </div>
-        <div class="price-box">
-          <div class="price-box-img"></div>
-          <div class="price-col">
-            <h4>Coupe</h4>
-            <div class="price-dots"></div>
-            <h3>25 CHF</h3>
-            <p>Coupe et contourage pour homme</p>
+        <div class="price-plans">
+          <div class="price-plans">
+            <div class="price-box">
+              <div class="price-box-img"></div>
+              <div class="price-col">
+                <h4>Epilation au fils</h4>
+                <div class="price-dots"></div>
+                <h3>15 CHF</h3>
+                <p>
+                  Epilation du visage au fil, une epilation des sourcils et
+                  duvet
+                </p>
+              </div>
+              <div class="price-col">
+                <h4>Coupe courte</h4>
+                <div class="price-dots"></div>
+                <h3>25 CHF</h3>
+                <p>Coiffure courte à la garçonne</p>
+              </div>
+            </div>
           </div>
-          <div class="price-col">
-            <h4>Barbe</h4>
-            <div class="price-dots"></div>
-            <h3>15 CHF</h3>
-            <p>Taille de precision pour barbe</p>
-          </div>
-          <div class="price-col">
-            <h4>Coupe + barbe</h4>
-            <div class="price-dots"></div>
-            <h3>30 CHF</h3>
-            <p>Coupe et contourage pour homme</p>
-          </div>
-          <div class="price-col">
-            <h4>Coupe enfant / etudiants</h4>
-            <div class="price-dots"></div>
-            <h3>20 CHF</h3>
-            <p>Tarif préferenciel pour les enfants et étudiants</p>
+          <div class="price-box">
+            <div class="price-box-img"></div>
+            <div class="price-col">
+              <h4>Coupe</h4>
+              <div class="price-dots"></div>
+              <h3>25 CHF</h3>
+              <p>Coupe et contourage pour homme</p>
+            </div>
+            <div class="price-col">
+              <h4>Barbe</h4>
+              <div class="price-dots"></div>
+              <h3>15 CHF</h3>
+              <p>Taille de precision pour barbe</p>
+            </div>
+            <div class="price-col">
+              <h4>Coupe + barbe</h4>
+              <div class="price-dots"></div>
+              <h3>37 CHF</h3>
+              <p>Coupe et contourage pour homme</p>
+            </div>
+            <div class="price-col">
+              <h4>Coupe enfant / etudiants</h4>
+              <div class="price-dots"></div>
+              <h3>20 CHF</h3>
+              <p>Tarif préferenciel pour les enfants et étudiants</p>
+            </div>
           </div>
         </div>
       </div>
@@ -171,31 +208,56 @@
         </div>
         <div class="week-hours">
           <div class="day-hours">
-            <h2>LUN</h2>
-            <p>Fermer</p>
+            <h2 class="day-content">LUN</h2>
+            <p class="day-content">Fermer</p>
           </div>
           <div class="day-hours">
-            <h2>MAR</h2>
-            <p>9h30 - 19h</p>
+            <h2 class="day-content">MAR</h2>
+            <p class="day-content">9h30 - 19h</p>
           </div>
           <div class="day-hours">
-            <h2>MER</h2>
-            <p>9h30 - 19h</p>
+            <h2 class="day-content">MER</h2>
+            <p class="day-content">9h30 - 19h</p>
           </div>
           <div class="day-hours">
-            <h2>JEU</h2>
-            <p>9h30 - 19h</p>
+            <h2 class="day-content">JEU</h2>
+            <p class="day-content">9h30 - 19h</p>
           </div>
           <div class="day-hours">
-            <h2>VEN</h2>
-            <p>9h30 - 19h</p>
+            <h2 class="day-content">VEN</h2>
+            <p class="day-content">9h30 - 19h</p>
           </div>
           <div class="day-hours">
-            <h2>SAM</h2>
-            <p>9h30 - 19h</p>
+            <h2 class="day-content">SAM</h2>
+            <p class="day-content">9h30 - 19h</p>
           </div>
         </div>
         <h2 class="annonce theme-color mt-4">FERMER DIMANCHE</h2>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="content-container">
+        <div class="contact-content">
+          <div class="section-head">
+            <h4 class="section-subtitile">Nous Contacter</h4>
+            <span class="white-txt">Faite une réservation !</span>
+            <p class="section-desc">
+              Prenez rendez-vous directement par téléphone et ayez votre place
+              pour une de nos prochaines disponibilité.
+            </p>
+            <h2 class="annonce theme-color mt-4">+41 78 238 63 96</h2>
+          </div>
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5504.549784430772!2d6.241464893286344!3d46.383772662373794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c432fa0d897c3%3A0x7d39443f6f5ba839!2sCoiffure%20Barbier%20Nyon!5e0!3m2!1sen!2sch!4v1694766968812!5m2!1sen!2sch"
+            width="500"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   </body>
