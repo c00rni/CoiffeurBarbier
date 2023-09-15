@@ -21,6 +21,7 @@ body {
 .content-container {
     max-width: 120rem;
     margin: auto;
+    padding:  0 2rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -93,7 +94,7 @@ a {
 }
 
 .annonce {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
@@ -136,21 +137,18 @@ header {
 
 nav {
     display: flex;
-    align-items: center;
     background-color: rgb(22, 22, 22, 0.8);
     flex: 1 1 auto;
 }
 
 header nav ul{
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-content: center;   
 }
 
 
 header nav ul li {
     display: flex;
+    flex: 1 1 auto;
     justify-content: center;
     align-content: center;
 }
@@ -177,8 +175,12 @@ nav ul a {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    transition: all 0.3s;
 }
 
+nav ul a:hover {
+    color:#bc9255;
+}
 
 /* landing section */
 
@@ -197,7 +199,7 @@ nav ul a {
 .landing-content {
     grid-area: landing-content;
     text-align: center;
-    align-self: center;
+    margin:auto;
 }
 
 .landing-content h4 {
@@ -243,7 +245,7 @@ nav ul a {
 /* About us */
 
 .about-us {
-    padding: 3rem 1.5rem;
+    padding: 3rem 0rem;
     background: #efefef;
 
 }
@@ -259,7 +261,7 @@ nav ul a {
 
 .feature {
     margin:2rem;
-    flex: 0 0 35rem;
+    flex: 0 0 34rem;
     display: flex;
     flex-flow: column nowrap;
     padding: 5rem 2rem 4rem 2rem;
@@ -422,7 +424,7 @@ nav ul a {
 /* Prices */
 
 .prices {
-    padding: 4rem;
+    padding: 5rem 0;
     color:white;
     background: #1f1f1f;
 }
@@ -502,7 +504,7 @@ nav ul a {
 
 .team {
     background: #efefef;
-    padding: 4rem;
+    padding: 5rem 0;
 }
 
 .team-members {
@@ -550,7 +552,7 @@ nav ul a {
 
 .hours {
     color: white;
-    padding: 5rem 1rem ;
+    padding: 5rem 0rem ;
     background: url(../img/gbs-tools.jpg) center center/cover;
     background-color: rgba(31, 31, 31, 0.8);
     background-blend-mode: multiply;
@@ -611,6 +613,29 @@ nav ul a {
     color:white;
 }
 
+.week-hours-small {
+    border:0.2rem solid #bc9255;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    min-width: 7rem;
+    background: #222;
+    text-align: justify;
+    display: none;
+}
+
+.week-hours-small p {
+    text-align: justify;
+}
+
+.week-hours-small span {
+    font-family: 'Josefin Sans', sans-serif;
+    color:white;
+    display: inline;
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
 .day-hours p {
     text-align: center;
 }
@@ -618,25 +643,20 @@ nav ul a {
 /* Contact */
 
 .contact {
-    padding: 4rem 1rem;
+    padding: 5rem 0;
     background: #1f1f1f;
     color:white;
 }
 
 .contact-content {
-    display: grid;
-    grid: "contact map" 1fr / 1fr 1fr;
+    display: flex;
     align-items: center;
     justify-items: center;
-}
-
-.contact-content .section-head {
-    grid-area: contact;
+    flex: 1 0 auto;
 }
 
 .map {
-    grid-area: map;
-    margin: 4rem;
+    margin: auto;
 }
 
 

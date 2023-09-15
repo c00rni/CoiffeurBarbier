@@ -1,0 +1,95 @@
+
+/* Header */
+
+.logo {
+    display: none;
+}
+
+.small-contact-box {
+    margin-bottom: 2.5rem;
+}
+
+
+nav {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    top:0;
+}
+
+header nav ul li:nth-child(3),
+header nav ul li:nth-child(7),
+header nav ul li:nth-child(2) {
+    display: none;
+}
+
+header nav ul {
+    width: 100%;
+}
+
+header nav ul li {
+    flex: 1 1 1fr;
+}
+
+header nav ul li a {
+    padding: 2.4rem 0;
+}
+
+/* Landing */
+
+.landing-section {
+    background: url(../img/facial-hair-cut.jpg) center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.landing-section a i {
+    display: none;
+}
+
+.landing-section h4 {
+    display: none;
+}
+
+/* About us */
+.feature {
+    flex: auto;
+}
+
+/* Numbers */
+
+.numbers {
+    display: none;
+}
+
+/* Services */
+
+.barber-services {
+    display: none;
+}
+
+/* Work Hours*/
+
+.week-hours {
+    display: none;
+}
+
+.week-hours-small {
+    display: grid;
+    grid: 
+    "dimanche-s span1" 1fr
+    "lundi-s span2" 1fr
+    "mardi-s span3" 1fr
+    "mercredi-s span4" 1fr
+    "jeudi-s span5" 1fr
+    "vendredi-s span6" 1fr /
+    2fr 1fr
+}
+
+.contact-content {
+    flex-flow: row wrap;
+}
+

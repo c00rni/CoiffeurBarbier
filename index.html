@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coiffeur Barbier - Pour les hommes</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="./css/styles-mobile.css"
+      rel="stylesheet"
+      media="screen and (max-width: 1250px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/styles-table.css"
+      media="only screen and (min-width:500px) and (max-width:1250px)"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,9 +39,8 @@
               <li><a href="#prices">Prix</a></li>
               <li><a href="#team">equipe</a></li>
               <li><a href="#hours">Horaires</a></li>
-              <!-- <li><a href="#">Gallery</a></li>-->
               <li><a href="#">blog</a></li>
-              <li><a href="#contact">contacter</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -39,12 +48,12 @@
       <div class="landing-content">
         <h4>Style Pour Les Hommes</h4>
         <h2>Coiffeur Barbier</h2>
-        <a class="btn btn-big" href="#contact">Réserver maintenant</a>
+        <a class="btn btn-big" href="tel:+41782604042">Réserver maintenant</a>
       </div>
       <div class="small-contact-box">
-        <h6>Nous contacter</h6>
+        <h6>Contactez nous</h6>
         <span>+41 78 238 63 96</span>
-        <p>Du lundi au vendredi</p>
+        <p>Du Mardi au Samedi</p>
       </div>
       <a href="#landing" class="go-up"
         ><i class="fa-solid fa-arrow-up-from-bracket fa-2xl"></i
@@ -73,7 +82,7 @@
                 chaque visite.
               </p>
               <hr />
-              <a class="btn btn-light" href="#">Savoir plus</a>
+              <a class="btn btn-light" href="#contact">Savoir plus</a>
             </div>
           </div>
           <div class="feature">
@@ -88,7 +97,7 @@
                 barbe et leur engagement font notre fierté.
               </p>
               <hr />
-              <a class="btn btn-light" href="#">Savoir plus</a>
+              <a class="btn btn-light" href="#contact">Savoir plus</a>
             </div>
           </div>
           <div class="feature">
@@ -125,13 +134,13 @@
       <div class="number-columb">
         <div class="count-inner">
           <span class="number">4</span>
-          <h6 class="counter-title">Barbier Professionnel</h6>
+          <h6 class="counter-title">Barbiers Professionnel</h6>
         </div>
       </div>
       <div class="number-columb">
         <div class="count-inner">
           <span class="number">+40</span>
-          <h6 class="counter-title">Style de coupe</h6>
+          <h6 class="counter-title">Styles de coupe</h6>
         </div>
       </div>
     </section>
@@ -152,7 +161,7 @@
                 professionnels travaillent sur tout type de coiffure. De la
                 coupe afro à la coupe degradé à la tondeuse.
               </p>
-              <a href="#" class="btn btn-light">Savoir plus</a>
+              <a href="#contact" class="btn btn-light">Savoir plus</a>
             </div>
           </div>
           <div class="service">
@@ -164,7 +173,7 @@
                 populaire. Nous faisons les barbes complète, barbe sculptée et
                 courte.
               </p>
-              <a href="#" class="btn btn-light">Savoir plus</a>
+              <a href="#contact" class="btn btn-light">Savoir plus</a>
             </div>
           </div>
           <div class="service">
@@ -175,7 +184,7 @@
                 Taille et mise en forme de moustache pour un style soigné. Les
                 styles classique comme la moustache Fu Manchu ou Handlebar.
               </p>
-              <a href="#" class="btn btn-light">Savoir plus</a>
+              <a href="#contact" class="btn btn-light">Savoir plus</a>
             </div>
           </div>
           <div class="service">
@@ -187,7 +196,7 @@
                 douleur et des gains temps importants. Epilation des sourcis au
                 fil réussi garanti pour le meilleur prix.
               </p>
-              <a href="#" class="btn btn-light">Savoir plus</a>
+              <a href="#contact" class="btn btn-light">Savoir plus</a>
             </div>
           </div>
         </div>
@@ -198,10 +207,6 @@
         <div class="section-head">
           <h4 class="section-subtitile">Nos Prix</h4>
           <span class="white-txt">Les incontournales et tendences</span>
-          <!--<p class="section-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ab
-            possimus a!
-          </p>-->
         </div>
         <div class="price-plans">
           <div class="price-box">
@@ -314,6 +319,22 @@
             <p class="day-content">9h30 - 19h</p>
           </div>
         </div>
+        <div class="week-hours-small">
+          <p>Dimanche . . . . . . . . . . .</p>
+          <span>Fermer</span>
+          <p>Lundi . . . . . . . . . . . . . . .</p>
+          <span>Fermer</span>
+          <p>Mardi . . . . . . . . . . . . . .</p>
+          <span>9h30 - 19h</span>
+          <p>Mercredi . . . . . . . . . . . .</p>
+          <span>9h30 - 19h</span>
+          <p>Jeudi . . . . . . . . . . . . . . .</p>
+          <span>9h30 - 19h</span>
+          <p>Vendredi . . . . . . . . . . . .</p>
+          <span>9h30 - 19h</span>
+          <p>Samedi . . . . . . . . . . . . .</p>
+          <span>9h30 - 19h</span>
+        </div>
         <h2 class="annonce theme-color mt-4">FERMER DIMANCHE</h2>
       </div>
     </section>
@@ -327,13 +348,15 @@
               Prenez rendez-vous directement par téléphone et ayez votre place
               pour une de nos prochaines disponibilité.
             </p>
-            <h2 class="annonce theme-color mt-4">+41 78 238 63 96</h2>
+            <a href="tel:+41782604042"
+              ><h2 class="annonce theme-color mt-4">+41 78 238 63 96</h2></a
+            >
           </div>
           <iframe
             class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5504.549784430772!2d6.241464893286344!3d46.383772662373794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c432fa0d897c3%3A0x7d39443f6f5ba839!2sCoiffure%20Barbier%20Nyon!5e0!3m2!1sen!2sch!4v1694766968812!5m2!1sen!2sch"
-            width="500"
-            height="350"
+            width="250"
+            height="175"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
