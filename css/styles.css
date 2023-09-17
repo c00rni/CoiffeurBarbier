@@ -1,663 +1,619 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --text-primary: #555;
+  --text-secondary: #1f1f1f;
+  --text-theme: #bc9255;
+  --text-invert: #fff;
+  --background-primary: #efefef;
+  --background-invert: #1f1f1f;
+  --background-invert-secondary: #222;
+  --background-invert-pannel: rgba(31, 31, 31, 0.8);
+  --color-annoncement-femal-accent: #FDA7DF;
+  --shadow-01: 0 0 1rem rgba(0,0,0,0.3);
+  --font-body-fallback: sans-serif;
+  --font-body: "Josefin Sans", var(--font-body-fallback);
+  --font-heading-fallback: cursive;
+  --font-heading: "Herr Von Muellerhoff", var(--font-heading-fallback);
+  --base-font-size: 62.5%;
+  --type-content-p-size: 1.8rem;
 }
 
-html, body {
-    font-size: 62.5%;
-    font-family: 'Josefin Sans', sans-serif;
-    scroll-behavior: smooth;
-    background: #efefef;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-font-size);
+  scroll-behavior: smooth;
 }
 
 body {
-    font-size: 1.8rem;
-    color:#555;
-    font-weight: 300;
-    font-style: normal;
+  font-size: var(--type-content-p-size);
+  font-family: var(--font-body);
+  color: #555;
+  font-weight: 300;
 }
 
 .content-container {
-    max-width: 120rem;
-    margin: auto;
-    padding:  0 2rem;
+  max-width: 120rem;
+  margin: auto;
+  padding: 0 2rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Herr Von Muellerhoff', cursive;
-    color:#bc9255;
-    letter-spacing: 0.3rem;
-}
-
-.section-subtitile {
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 4rem;
-}
-
-.section-desc {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.section-head {
-    margin-bottom: 4.5rem;
-}
-
-.page-container{
-    max-width: 120rem;
-    margin:auto;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-theme);
+  letter-spacing: 0.3rem;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 p {
-    line-height: 2rem;
+  line-height: 2rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.btn {
-    border: 0.1rem solid black;
-    text-align: center;
+.btn-big, .btn-light {
+  border: 0.1rem solid var(--text-secondary);
+  text-align: center;
 }
 
 .btn-light {
-    display: inline-block;
-    margin-top: 1.8rem;
-    padding: 1rem 2rem;
-    font-weight: 500;
-    color:#1f1f1f;
-    transition: all 0.2s;
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s;
 }
-
 .btn-light:hover {
-    color:#bc9255
-}
-
-.section-head span{
-    display: block;
-    font-size: 3.2rem;
-    color:#1f1f1f;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.white-txt {
-    color:white !important
-}
-
-.annonce {
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-.theme-color {
-    color:#bc9255
-}
-
-.mt-4 {
-    margin-top: 4rem;
-}
-
-.go-up {
-    position: fixed;
-    bottom: 5vh;
-    right: 5vh;
-    color:#bc9255;
-    z-index: 1;
-}
-
-/* Header */ 
-
-.logo {
-    margin-right: 5rem;
-    width: 15rem;
-}
-
-header {
-    grid-area: header;
-    display: flex;
-    align-items: center;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
-}
-
-nav {
-    display: flex;
-    background-color: rgb(22, 22, 22, 0.8);
-    flex: 1 1 auto;
-}
-
-header nav ul{
-    display: flex;
-}
-
-
-header nav ul li {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    align-content: center;
-}
-
-header nav a {
-    padding: 2.4rem 1.8rem;
-    text-align: center;
-    vertical-align: middle;
-    transition: all 0.2s;
-}
-
-header nav a:hover{
-    color: #bc9255;
-}
-
-header nav .active{
-    color: #bc9255
-}
-
-nav ul a {
-    color: white;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    transition: all 0.3s;
-}
-
-nav ul a:hover {
-    color:#bc9255;
-}
-
-/* landing section */
-
-.landing-section {
-    background: url(../img/facial-hair-cut.jpg) center center/cover;
-    height: 100vh;
-    display: grid;
-    grid:
-    ". header header header header" 12rem
-    ". landing-content landing-content landing-content ." auto
-    ". . contact-box . ." 15rem
-    / 0.8fr 1fr 30rem 1fr 0.8fr;
-    z-index: 2;
-}
-
-.landing-content {
-    grid-area: landing-content;
-    text-align: center;
-    margin:auto;
-}
-
-.landing-content h4 {
-    margin-bottom: 0.5rem;
-    font-size: 5rem;
-}
-
-.landing-content h1 {
-    font-size: 5rem;
-    color:white;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: 5rem;
+  color: var(--text-theme);
 }
 
 .btn-big {
-    color: white;
-    padding:1.2rem 3.2rem;
-    border:0.2rem solid white;
-    font-weight: 700;
-    letter-spacing: 0.2rem;
+  color: var(--text-invert);
+  padding: 1.2rem 3.2rem;
+  border: 0.2rem solid var(--text-invert);
+  font-weight: 700;
+  letter-spacing: 0.2rem;
 }
 
-.small-contact-box {
-    grid-area: contact-box;
-    align-self: center;
-    text-align: center;
-    color: white
+/* Header */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  margin-right: 5rem;
+  width: 15rem;
+}
+@media (max-width: 1250px) {
+  header .logo {
+    display: none;
+  }
+}
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+header nav {
+  display: flex;
+  background-color: var(--background-invert-pannel);
+  flex: 1 1 auto;
+}
+@media (max-width: 1250px) {
+  header nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+}
+header nav ul {
+  display: flex;
+}
+@media (max-width: 1250px) {
+  header nav ul {
+    width: 100%;
+  }
+}
+header nav ul li {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-content: center;
+}
+header nav ul li a {
+  padding: 2.4rem 1.8rem;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--text-invert);
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  color: var(--text-theme);
+}
+@media (max-width: 1250px) {
+  header nav ul li a {
+    padding: 2.4rem 0;
+  }
+}
+@media (max-width: 1250px) {
+  header nav ul li {
+    flex: 1 1 1fr;
+  }
+}
+@media (max-width: 1250px) {
+  header nav ul li:nth-child(3),
+  header nav ul li:nth-child(7),
+  header nav ul li:nth-child(2) {
+    display: none;
+  }
+}
+header nav .active {
+  color: var(--text-theme);
 }
 
-.small-contact-box h6 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
-
+.annonce {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.small-contact-box span {
-    font-weight: 700;
-    font-size: 3rem;
+.theme-color {
+  color: var(--text-theme);
 }
 
-/* About us */
-
-.about-us {
-    padding: 3rem 0rem;
-    background: #efefef;
-
+.mt-4 {
+  margin-top: 4rem;
 }
 
-.features {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-
+.go-up {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vh;
+  color: var(--text-theme);
+  z-index: 1;
 }
 
-.feature {
-    margin:2rem;
-    flex: 0 0 34rem;
+/* Sections headers */
+.section-head {
+  margin-bottom: 4.5rem;
+}
+.section-head h4 {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 4rem;
+}
+.section-head p {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.section-head span {
+  display: block;
+  font-size: 3.2rem;
+  color: #1f1f1f;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.white-txt {
+  color: white !important;
+}
+
+/* Landing Section */
+.landing-section {
+  background: url(../img/facial-hair-cut.jpg) center center/cover;
+  height: 100vh;
+  display: grid;
+  grid: ". header header header header" 12rem ". landing-content landing-content landing-content ." auto ". . contact-box . ." 15rem/0.8fr 1fr 30rem 1fr 0.8fr;
+  z-index: 2;
+}
+@media (max-width: 1250px) {
+  .landing-section {
     display: flex;
     flex-flow: column nowrap;
-    padding: 5rem 2rem 4rem 2rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-
+  }
+  .landing-section .go-up, .landing-section h4 {
+    display: none;
+  }
+}
+.landing-section .landing-content {
+  grid-area: landing-content;
+  text-align: center;
+  margin: auto;
+}
+.landing-section .landing-content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 5rem;
+}
+.landing-section .landing-content h1 {
+  font-size: 5rem;
+  color: var(--text-invert);
+  font-family: var(--font-body);
+  margin-bottom: 5rem;
+}
+.landing-section .small-contact-box {
+  grid-area: contact-box;
+  align-self: center;
+  text-align: center;
+  color: var(--text-invert);
+}
+@media (max-width: 1250px) {
+  .landing-section .small-contact-box {
+    margin-bottom: 2.5rem;
+  }
+}
+.landing-section .small-contact-box h6 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+.landing-section .small-contact-box span {
+  font-weight: 700;
+  font-size: 3rem;
 }
 
-.feature:nth-child(1) .feature-img {
-    width: 7rem;
-    height: 7rem;
-    background: url(../img/switzerland.png) center center/cover;
+/* Section About us */
+.about-us {
+  padding: 3rem 0rem;
+  background: var(--background-primary);
+}
+.about-us .features {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.about-us .features .feature {
+  margin: 2rem;
+  flex: 0 0 34rem;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5rem 2rem 4rem 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-01);
+}
+@media (max-width: 1250px) {
+  .about-us .features .feature {
+    flex: auto;
+  }
+}
+.about-us .features .feature-img {
+  width: 7rem;
+  height: 7rem;
+}
+.about-us .features .feature:nth-child(1) .feature-img {
+  background: url(../img/switzerland.png) center center/cover;
+}
+.about-us .features .feature:nth-child(2) .feature-img {
+  background: url(../img/certificate.png) center center/cover;
+}
+.about-us .features .feature:nth-child(3) .feature-img {
+  background: url(../img/barbershop.png) center center/cover;
+}
+.about-us .features .feature-content {
+  margin-top: 3rem;
+}
+.about-us .features .feature-content h4 {
+  color: #1f1f1f;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.about-us .features .feature-content hr {
+  margin: 2rem 0;
 }
 
-.feature:nth-child(2) .feature-img {
-    width: 7rem;
-    height: 7rem;
-    background: url(../img/certificate.png) center center/cover;
-}
-
-.feature:nth-child(3) .feature-img {
-    width: 7rem;
-    height: 7rem;
-    background: url(../img/barbershop.png) center center/cover;
-}
-
-.feature-content {
-    margin-top:3rem
-}
-
-.feature-content h4 {
-    color:#1f1f1f;
-    font-family: 'Josefin Sans', sans-serif;
-    letter-spacing: 0.05rem;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.feature-content hr {
-    margin:2rem 0;
-}
-
-
-/* Numbers */
-
+/* Section number */
 .numbers {
-    background: #1f1f1f;
-    padding: 4rem 0;
-    display: flex;
+  background: var(--background-invert);
+  padding: 4rem 0;
+  display: flex;
+}
+@media (max-width: 1250px) {
+  .numbers {
+    display: none;
+  }
+}
+.numbers .number-columb {
+  flex: 1 1 auto;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+.numbers .number-columb .count-inner {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.numbers .number-columb .count-inner .number {
+  color: var(--text-theme);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 7rem;
+  display: inline-block;
+  letter-spacing: 0.025em;
+}
+.numbers .number-columb .count-inner .counter-title {
+  font-family: var(--font-body);
+  color: var(--text-invert);
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.number-columb {
-    flex: 1 1 auto;
-    margin-bottom: 5rem;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.count-inner {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.number {
-    color:#bc9255;
-    font-family: 'Herr Von Muellerhoff', cursive;
-    font-weight: 700;
-    font-size: 7rem;
-    display: inline-block;
-    letter-spacing: .025em;
-}
-
-.counter-title {
-    font-family: 'Josefin Sans', sans-serif;
-    color:white;
-    letter-spacing: 0;
-    vertical-align: middle;
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-
-
-
-/* Section services */
-
+/* Section service */
 .barber-services {
-    background: #efefef;
-    padding: 1.5rem;
-    padding-bottom: 6rem;
+  background: var(--background-primary);
+  padding: 3rem 0rem;
 }
-
-.services {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
+@media (max-width: 1250px) {
+  .barber-services {
+    display: none;
+  }
 }
-
-.service {
-    margin: 1rem 1rem 3rem 1rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
-    padding:5rem 3rem 4rem 3rem;
-    border:0.2rem solid #bc9255;
-    display: grid;
-    grid: 
-    "img" 9rem
-    "service-content" auto /
-    1fr;
-    justify-content: start;
-    max-width: 35rem;
+.barber-services .services {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
 }
-
-.service-img {
-    grid-area: img;
-    /* border:0.2rem dashed #bc9255; */
-    width: 6.8rem;
-    height: 6.8rem;
-    grid-column: 1 / 2;
+.barber-services .service {
+  margin: 1rem 1rem 3rem 1rem;
+  box-shadow: var(--shadow-01);
+  padding: 5rem 3rem 4rem 3rem;
+  border: 0.2rem solid var(--text-theme);
+  display: grid;
+  grid: "img" 9rem "service-content" auto/1fr;
+  justify-content: start;
+  max-width: 35rem;
 }
-
-.service-content {
-    grid-area: service-content;
+.barber-services .service .service-img {
+  grid-area: img;
+  /* border:0.2rem dashed #bc9255; */
+  width: 6.8rem;
+  height: 6.8rem;
+  grid-column: 1/2;
 }
-
-.service-content p {
-    max-height: 6rem;
-    overflow: hidden;
+.barber-services .service h4 {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
-
-.service:nth-child(1) .service-img{
-    background: url("../img/scissors-comb.png") center center/cover;
+.barber-services .service:nth-child(1) .service-img {
+  background: url("../img/scissors-comb.png") center center/cover;
 }
-
-.service:nth-child(2) .service-img{
-    background: url("../img/clipper.png") center center/cover;
+.barber-services .service:nth-child(2) .service-img {
+  background: url("../img/clipper.png") center center/cover;
 }
-
-.service:nth-child(3) .service-img{
-    background: url("../img/mustache.png") center center/cover;
+.barber-services .service:nth-child(3) .service-img {
+  background: url("../img/mustache.png") center center/cover;
 }
-
-.service:nth-child(4) .service-img{
-    background: url("../img/eyelashes-black.png") center center/cover;
-}
-
-.service h4 {
-    color: #1f1f1f;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1rem;
+.barber-services .service:nth-child(4) .service-img {
+  background: url("../img/eyelashes-black.png") center center/cover;
 }
 
 /* Prices */
-
 .prices {
-    padding: 5rem 0;
-    color:white;
-    background: #1f1f1f;
+  padding: 3rem 0rem;
+  color: var(--text-invert);
+  background: var(--background-invert);
+}
+.prices .price-plans {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+.prices .price-plans .price-box {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 0.2rem solid var(--text-theme);
+  border-radius: 1rem;
+  padding: 5rem 3rem 4rem 3rem;
+  max-width: 40rem;
+  margin-bottom: 4rem;
+}
+.prices .price-plans .price-box .price-box-img {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin-bottom: 0 auto auto 3rem;
+  align-self: center;
+}
+.prices .price-plans .price-box:nth-child(1) .price-box-img {
+  background: url(../img/mustache-with-beard.png) center center/cover;
+}
+.prices .price-plans .price-box:nth-child(2) .price-box-img {
+  background: url(../img/eyebrow-icone.png) center center/cover;
+}
+.prices .price-plans .price-box:last-child {
+  background: linear-gradient(to right bottom, var(--background-invert) 85%, var(--color-annoncement-femal-accent));
+}
+.prices .price-plans .price-col {
+  padding: 1.5rem 0;
+  display: grid;
+  grid: "service-name dots price" 1fr "details details details" 1fr/auto auto auto;
+}
+.prices .price-plans .price-col .price-dots {
+  grid-area: dots;
+}
+.prices .price-plans .price-col h3 {
+  grid-area: price;
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  letter-spacing: normal;
+  text-align: end;
+}
+.prices .price-plans .price-col h4 {
+  grid-area: service-name;
+  font-family: var(--font-body);
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: var(--text-invert);
+}
+.prices .price-plans .price-col p {
+  grid-area: details;
 }
 
-.price-plans {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-}
-
-.price-box {
-    display: flex;
-    flex-flow: column nowrap;
-    border: 0.2rem solid #bc9255;
-    border-radius: 1rem;
-    padding: 5rem 3rem 4rem 3rem;
-    max-width: 40rem;
-    margin-bottom: 4rem;
-}
-
-.price-box:last-child {
-    background: linear-gradient(to right bottom, #1f1f1f 85%, #FDA7DF);
-}
-
-.price-box-img {
-    width: 9.5rem;
-    height: 9.5rem;
-    margin-bottom:0 auto auto 3rem;
-    align-self: center;
-}
-
-.price-box:nth-child(1) .price-box-img {
-    background: url(../img/mustache-with-beard.png) center center/cover;
-}
-
-.price-box:nth-child(2) .price-box-img {
-    background: url(../img/eyebrow-icone.png) center center/cover;
-}
-
-.price-col {
-    padding: 1.5rem 0;
-    display: grid;
-    grid: 
-    "service-name dots price" 1fr
-    "details details details" 1fr
-    / auto auto auto
-}
-
-.price-col .price-dots {
-    grid-area: dots;
-}
-
-.price-col h3 {
-    grid-area: price;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: normal;
-    text-align: end;
-}
-
-.price-col h4 {
-    grid-area: service-name;
-    font-family: 'Josefin Sans', sans-serif;
-    display: inline-block;
-    font-weight: 600;
-    letter-spacing: normal;
-    color: white;
-
-}
-
-.pricing-col p {
-    grid-area: details;
-}
-
-/* Team */
-
+/* Section Team */
 .team {
-    background: #efefef;
-    padding: 5rem 0;
+  background: var(--background-primary);
+  padding: 3rem 0rem;
 }
-
-.team-members {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-    padding-top:5rem;
+.team .team-members {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 5rem;
 }
-
-.member {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 37rem;
-    padding-bottom: 2rem;
+.team .member {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 37rem;
+  padding-bottom: 2rem;
 }
-
-.member-caption {
-    width: 100%;
-    height: 41.5rem;
-    background: url(../img/boss.jpg) center center/cover;
+.team .member h4 {
+  padding-top: 1rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
 }
-
-.member:nth-child(2) .member-caption {
-    background: url(../img/man1.jpg) center center/cover;
+.team .member .member-title {
+  text-align: center;
+  font-weight: 400;
+  color: var(--text-theme);
 }
-
-.member-details h4{
-    padding-top:1rem;
-    letter-spacing: 0.05rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-    color:#1f1f1f;
+.team .member-caption {
+  width: 100%;
+  height: 41.5rem;
+  background: url(../img/boss.jpg) center center/cover;
 }
-
-.member-title {
-    text-align: center;
-    font-weight: 400;
-    color:#bc9255
+.team .member:nth-child(2) .member-caption {
+  background: url(../img/man1.jpg) center center/cover;
 }
 
 /* Work hours */
-
 .hours {
-    color: white;
-    padding: 5rem 0rem ;
-    background: url(../img/gbs-tools.jpg) center center/cover;
-    background-color: rgba(31, 31, 31, 0.8);
-    background-blend-mode: multiply;
+  padding: 3rem 0rem;
+  color: var(--text-invert);
+  background: url(../img/gbs-tools.jpg) center center/cover;
+  background-color: var(--background-invert-pannel);
+  background-blend-mode: multiply;
 }
 
 .week-hours {
-    display: grid;
-    grid: "lundi mardi mercredi jeudi vendredi samedi" / 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-top: 4rem;
+  display: grid;
+  grid: "lundi mardi mercredi jeudi vendredi samedi"/1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
 }
-
-.day-hours:nth-child(1) {
-    grid-area: lundi;
+@media (max-width: 1250px) {
+  .week-hours {
+    display: none;
+  }
 }
-
-.day-hours:nth-child(2) {
-    grid-area: mardi;
+.week-hours .day-hours {
+  border: 0.2rem solid var(--text-theme);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  min-width: 7rem;
+  background: var(--background-invert-secondary);
 }
-
-.day-hours:nth-child(3) {
-    grid-area: mercredi;
+.week-hours .day-hours h2 {
+  padding-top: 1rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  color: var(--text-invert);
 }
-
-.day-hours:nth-child(4) {
-    grid-area: jeudi;
+.week-hours .day-hours p {
+  text-align: center;
 }
-
-.day-hours:nth-child(5) {
-    grid-area: vendredi;
-}
-
-.day-hours:nth-child(6) {
-    grid-area: samedi;
-}
-
-.day-hours:hover .day-content {
-    color:#bc9255;
-    transition: all 0.3s;
-}
-
-.day-hours {
-    border:0.2rem solid #bc9255;
-    padding: 3rem 1.5rem 2rem 1.5rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    min-width: 7rem;
-    background: #222;
-}
-
-.day-hours h2 {
-    padding-top:1rem;
-    letter-spacing: 0.05rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-    color:white;
+.week-hours .day-hours:hover .day-content {
+  color: var(--text-theme);
+  transition: all 0.3s;
 }
 
 .week-hours-small {
-    border:0.2rem solid #bc9255;
-    padding: 3rem 1.5rem 2rem 1.5rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    min-width: 7rem;
-    background: #222;
-    text-align: justify;
-    display: none;
+  border: 0.2rem solid var(--text-theme);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  min-width: 7rem;
+  background: var(--background-invert-secondary);
+  text-align: justify;
+  grid: "dimanche-s span1" 1fr "lundi-s span2" 1fr "mardi-s span3" 1fr "mercredi-s span4" 1fr "jeudi-s span5" 1fr "vendredi-s span6" 1fr/2fr 1fr;
+  display: none;
 }
-
+@media (max-width: 1250px) {
+  .week-hours-small {
+    display: grid;
+  }
+}
 .week-hours-small p {
-    text-align: justify;
+  text-align: justify;
 }
-
 .week-hours-small span {
-    font-family: 'Josefin Sans', sans-serif;
-    color:white;
-    display: inline;
-    font-size: 1.8rem;
-    text-align: justify;
+  font-family: var(--font-body);
+  color: var(--text-invert);
+  display: inline;
+  font-size: 1.8rem;
+  text-align: justify;
 }
 
-.day-hours p {
-    text-align: center;
-}
-
-/* Contact */
-
+/* Section Contact */
 .contact {
-    padding: 5rem 0;
-    background: #1f1f1f;
-    color:white;
+  padding: 3rem 0rem;
+  background: var(--background-invert);
+  color: var(--text-invert);
 }
-
-.contact-content {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    flex: 1 0 auto;
+.contact .contact-content {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex: 1 0 auto;
+}
+@media (max-width: 1250px) {
+  .contact .contact-content {
+    flex-flow: row wrap;
+  }
 }
 
 .map {
-    margin: auto;
+  margin: auto;
 }
 
-
-
+/*# sourceMappingURL=styles.css.map */

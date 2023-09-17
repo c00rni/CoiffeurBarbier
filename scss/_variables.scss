@@ -1,0 +1,20 @@
+:root {
+    --text-primary: #555;
+    --text-secondary: #1f1f1f;
+    --text-theme: #bc9255;
+    --text-invert: #fff;
+    --background-primary: #efefef;
+    --background-invert: #1f1f1f;
+    --background-invert-secondary: #222;
+    --background-invert-pannel: rgba(31, 31, 31, 0.8);
+    --color-annoncement-femal-accent: #FDA7DF;
+    --shadow-01: 0 0 1rem rgba(0,0,0,0.3);
+
+    --font-body-fallback: sans-serif;
+    --font-body: 'Josefin Sans', var(--font-body-fallback);
+    --font-heading-fallback: cursive;
+    --font-heading: 'Herr Von Muellerhoff', var(--font-heading-fallback);
+
+    --base-font-size: 62.5%;
+    --type-content-p-size: 1.8rem;
+}
