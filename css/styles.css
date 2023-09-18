@@ -213,7 +213,8 @@ header nav .active {
 }
 
 .white-txt {
-  color: white !important;
+  color: var(--text-invert) !important;
+  text-decoration: none;
 }
 
 /* Landing Section */
