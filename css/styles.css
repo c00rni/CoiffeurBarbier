@@ -4,6 +4,7 @@
   --text-theme: #bc9255;
   --text-invert: #fff;
   --background-primary: #efefef;
+  --background-secondary: #fff;
   --background-invert: #1f1f1f;
   --background-invert-secondary: #222;
   --background-invert-pannel: rgba(31, 31, 31, 0.8);
@@ -271,7 +272,7 @@ header nav .active {
 
 /* Section About us */
 .about-us {
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
   background: var(--background-primary);
 }
 .about-us .features {
@@ -369,7 +370,7 @@ header nav .active {
 /* Section service */
 .barber-services {
   background: var(--background-primary);
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
 }
 @media (max-width: 1250px) {
   .barber-services {
@@ -420,7 +421,7 @@ header nav .active {
 
 /* Prices */
 .prices {
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
   color: var(--text-invert);
   background: var(--background-invert);
 }
@@ -484,7 +485,7 @@ header nav .active {
 /* Section Team */
 .team {
   background: var(--background-primary);
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
 }
 .team .team-members {
   display: flex;
@@ -522,9 +523,65 @@ header nav .active {
   background: url(../img/man1.jpg) center center/cover;
 }
 
+/* Section Testimonials */
+.testimonials {
+  background: var(--background-primary);
+  padding: 5rem 0rem 3rem 0rem;
+}
+.testimonials .reviews {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 1rem;
+}
+.testimonials .reviews .testimonial {
+  flex: 1;
+  background: var(--background-secondary);
+  display: flex;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-01);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem;
+}
+.testimonials .reviews .testimonial .person {
+  flex: 0 0 13rem;
+}
+.testimonials .reviews .testimonial .person img {
+  width: 4.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1250px) {
+  .testimonials .reviews .testimonial .person img {
+    margin: 2rem auto;
+    display: block;
+  }
+}
+.testimonials .reviews .testimonial .person .name {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.testimonials .reviews .testimonial .person .source {
+  font-style: italic;
+}
+.testimonials .reviews .testimonial .comment {
+  margin: 0 4rem;
+  font-size: 2.2rem;
+}
+.testimonials .reviews .testimonial-reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 1250px) {
+  .testimonials .reviews .testimonial {
+    flex-direction: column-reverse;
+  }
+}
+
 /* Work hours */
 .hours {
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
   color: var(--text-invert);
   background: url(../img/gbs-tools.jpg) center center/cover;
   background-color: var(--background-invert-pannel);
@@ -596,7 +653,7 @@ header nav .active {
 
 /* Section Contact */
 .contact {
-  padding: 3rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
   background: var(--background-invert);
   color: var(--text-invert);
 }

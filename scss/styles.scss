@@ -427,6 +427,67 @@
     
 }
 
+/* Section Testimonials */
+
+.testimonials {
+    background: var(--background-primary);
+    @include mixins.section-padding;
+
+    .reviews {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top:1rem;
+
+        .testimonial {
+            flex: 1;
+            background: var(--background-secondary);
+            display: flex;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-01);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3.5rem;
+
+
+            .person {
+                flex: 0 0 13rem;
+                img {
+                    width: 4.5rem;
+                    margin-bottom: 0.5rem;
+                    @include mixins.mobile {
+                        margin: 2rem auto;
+                        display: block;
+                    }
+                }
+                .name {
+                    margin-bottom: 0.5rem;
+                    font-weight: 700;
+                }
+                .source {
+                    font-style: italic;
+                }
+            }
+
+            .comment {
+                margin:0 4rem;
+                font-size: 2.2rem;
+            }
+
+            &-reverse {
+                flex-direction: row-reverse;
+            }
+
+            @include mixins.mobile {
+                flex-direction: column-reverse;
+            }
+        }
+        
+    }
+}
+
 /* Work hours */
 
 .hours {
