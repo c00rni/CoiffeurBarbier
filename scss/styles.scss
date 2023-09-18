@@ -59,7 +59,7 @@
 /* Landing Section */
 
 .landing-section {
-    background: url(../img/facial-hair-cut.jpg) center center/cover;
+    background: url(../img/facial-hair-cut.webp) center center/cover;
     height: 100vh;
     display: grid;
     grid:
@@ -154,16 +154,16 @@
         }
 
         .feature:nth-child(1) .feature-img {
-            background: url(../img/switzerland.png) center center/cover;
+            background: url(../img/switzerland.webp) center center/cover;
         }
         
         .feature:nth-child(2) .feature-img {
 
-            background: url(../img/certificate.png) center center/cover;
+            background: url(../img/certificate.webp) center center/cover;
         }
         
         .feature:nth-child(3) .feature-img {
-            background: url(../img/barbershop.png) center center/cover;
+            background: url(../img/barbershop.webp) center center/cover;
         }
 
         .feature-content {
@@ -280,19 +280,19 @@
     }
 
     .service:nth-child(1) .service-img{
-        background: url("../img/scissors-comb.png") center center/cover;
+        background: url("../img/scissors-comb.webp") center center/cover;
     }
     
     .service:nth-child(2) .service-img{
-        background: url("../img/clipper.png") center center/cover;
+        background: url("../img/clipper.webp") center center/cover;
     }
     
     .service:nth-child(3) .service-img{
-        background: url("../img/mustache.png") center center/cover;
+        background: url("../img/mustache.webp") center center/cover;
     }
     
     .service:nth-child(4) .service-img{
-        background: url("../img/eyelashes-black.png") center center/cover;
+        background: url("../img/eyelashes-black.webp") center center/cover;
     }
 
 }
@@ -329,11 +329,11 @@
         }
 
         .price-box:nth-child(1) .price-box-img {
-            background: url(../img/mustache-with-beard.png) center center/cover;
+            background: url(../img/mustache-with-beard.webp) center center/cover;
         }
         
         .price-box:nth-child(2) .price-box-img {
-            background: url(../img/eyebrow-icone.png) center center/cover;
+            background: url(../img/eyebrow-icone.webp) center center/cover;
         }
         
 
@@ -443,7 +443,7 @@
             background: var(--background-secondary);
             display: flex;
             border-radius: 0.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             box-shadow: var(--shadow-01);
             display: flex;
             flex-flow: row nowrap;
@@ -493,7 +493,7 @@
 .hours {
     @include mixins.section-padding;
     color: var(--text-invert);
-    background: url(../img/gbs-tools.jpg) center center/cover;
+    background: url(../img/gbs-tools.webp) center center/cover;
     background-color: var(--background-invert-pannel);
     background-blend-mode: multiply;
 }
